@@ -1,0 +1,174 @@
+// Box Expense
+
+// Box Header
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  > .title {
+    font-weight: 600;
+    color: #707070;
+  }
+
+  // Actions
+  > .actions {
+    display: flex; 
+    align-items: center;
+
+    // Delete 
+    > .delete {
+      color: #707070;
+      cursor: pointer;
+      padding: 13px;
+
+      &:hover {
+        color: #EB4B50;
+        background-color: rgba(0, 0, 0, .06);
+        border-radius: 100%;
+      } 
+    }
+
+    // Edit
+    .edit {
+      color: #707070;
+      cursor: pointer;
+      padding: 13px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .06);
+        border-radius: 100%;
+      } 
+    }
+  }
+
+
+  > .select {
+    display: flex;
+    font-size: 0.9em;
+    color: #707070;
+
+    li {
+      padding: 0 10px;
+      cursor: pointer;
+      color: red;
+      opacity: 0.4;
+
+      &.active {
+        opacity: 1;
+      }
+      
+      &.mercado {
+        color: #EB4B50;
+      }
+
+      &.geral {
+        color: #A92465;
+      }
+
+      &.lazer {
+        color: #1394EF;
+      }
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: currentColor;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Box Expense
+.box-expense {
+  box-shadow: 0 1px 5px -2px rgba(0, 0, 0, 0.54);
+  padding: 12px 15px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+
+  // mercado
+  &.-moradia {
+    border-left: 5px solid #8087E0;
+  }
+
+  &.-mercado {
+    border-left: 5px solid #ea754b;
+  }
+
+  &.-saude {
+    border-left: 5px solid #ed4a4a;
+  }
+
+  // lazer
+  &.-lazer {
+    border-left: 5px solid #82b0f9;
+  }
+
+  // outros
+  &.-outros {
+    border-left: 5px solid #006663;
+  }
+  
+}
+
+// Expense Totals
+.expenses-totals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #353535;
+  margin-top: 25px;
+
+  .essencial {
+    font-weight: 600;
+    color: #9C27B0;
+  }
+
+  .extra {
+    font-weight: 600;
+    color: #1394EF;
+    margin: 5px 0;
+  }
+
+  > .names {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > .values {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+}
+
+// Icon Add
+.icon-add {
+  text-align: center;
+
+  // title
+  > .title {
+    color: #707070;
+  }
+
+  // Icon
+  > .icon {
+    width: 50px;
+    margin: 0 auto;
+
+    > img {
+      width: 100%;
+    }
+  }
+}

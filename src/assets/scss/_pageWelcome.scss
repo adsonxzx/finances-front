@@ -1,0 +1,137 @@
+// Card Select Container
+.card-select-container {
+  display: flex;
+  justify-content: center;
+}
+
+// Card Select
+.card-select {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #DDDCE1;
+  padding: 30px 20px;
+  background: #F8F8FA;
+  flex-basis: 25%;
+  margin: 0 2%;
+  border-radius: 4px;
+  position: relative; 
+  cursor: pointer;
+
+  &.select {
+    border: 5px solid #76A8E2;
+  }
+
+  > .image {
+    width: 80px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  > .title {
+    color: #797B8D;
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+}
+
+// icon select
+.icon-select {
+  background: #76A8E2;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -16px;
+  right: -18px;
+
+  > .icon {
+    color: #fff;
+  }
+}
+
+// Card Form
+.card-form {
+  display: flex;
+  margin-top: 50px; 
+
+  // header
+  .header {
+    display: flex;
+    align-items: center;
+    color: #72788D;
+    // numeros
+    > .number {
+      width: 55px;
+      height: 40px;
+
+      border: 1px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%; 
+
+      span {
+        font-weight: 600;
+        font-size: 1.4em;
+      }
+    }
+
+    > .title {
+      font-weight: 600;
+      font-size: 1.4em;
+      margin: 0 10px;
+    }
+
+    > .info {
+      font-size: 0.9em;
+      flex-basis: 40%;
+    }
+  }
+}
+
+.form-income {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+  padding: 0 40px;
+}
+
+// List income
+.list-income {
+  margin-top: 30px;
+  margin: 50px 56px;
+  border: 1px solid #DDDCE1;
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.table-income {
+  color: #72788D !important;
+
+  thead th{
+    font-weight: 600;
+  }
+
+  th {
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  th:first-child {
+    text-align: left;
+  }
+
+  td:first-child {
+    text-align: center;
+  }
+}

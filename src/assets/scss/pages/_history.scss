@@ -1,0 +1,94 @@
+
+// TEMP
+.box-patrimonio-container {
+  padding: 0 40px !important;
+}
+
+.box-expense-container {
+  margin: 0;
+}
+
+
+// Info top container
+.info-top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Info top titleaction
+.info-top-titleaction {
+  display: flex;
+  align-items: center;
+}
+
+// Icon addexpense
+.icon-addexpense {
+  margin-left: 20px;
+
+  > .icon {
+    width: 30px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// Filter Year
+.filter-year {
+  display: flex;
+  align-items: center;
+
+  > .label {
+    color: #354558;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  > .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    color: #354558;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),
+                0px 6px 10px 0px rgba(0,0,0,0.14)
+  }
+}
+
+// 
+.list-categories-title {
+
+}
+
+// List Categories
+.list-categories {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 695px;
+}
+
+// Category Box
+.category-box {
+  display: inline-block;
+  padding: 9px 12px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 1px 7px -1px rgba(118, 168, 226, 0.4);
+  min-width: 128px;
+  
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &.select {
+    border: 1px solid #76A8E2;
+  }
+}
+
+// Section Title 

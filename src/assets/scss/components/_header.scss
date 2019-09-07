@@ -1,0 +1,91 @@
+// Header
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(120deg, #00e4d0, #5983e8);
+
+  > a {
+    color: #fff;
+    font-weight: 500;
+    &:hover {
+      color: #fff;
+      opacity: 0.8;
+    } 
+  }
+}
+
+// Conteudo lado direito
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// Icon Alert
+.icon-alert {
+  position: relative;
+  margin-right: 35px;
+  cursor: pointer;
+
+  > .icon {
+    color: #fff;
+    font-size: 1.3em;
+  }
+
+  > .nmessage {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: #E91E63;
+    padding: 1px 6px;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+}
+
+// avatar usuario
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  > .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: red;
+    overflow: hidden;
+    margin-right: 15px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.icon-alert-container {
+  position: relative;
+}
+
+// Notification Content 
+.notification-content {
+  display: none;
+  box-shadow: 0 1px 5px -2px rgba(0, 0, 0, 0.54);
+  background: #fff;
+  border-radius: 4px;
+  padding: 15px 20px;
+  min-width: 290px;
+  min-height: 200px;
+  position: absolute;
+  right: -78px;
+  top: 33px;
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

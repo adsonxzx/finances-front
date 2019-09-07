@@ -1,0 +1,107 @@
+// menu lateral
+.side-bar {
+  width: 290px;
+  background: #fff;
+  padding: 20px 10px;
+  transition: 0.1s;
+  box-shadow: 0 1px 8px -2px rgba(0,0,0,0.24);
+  
+  .title {
+    font-size: 1.8em;
+    text-align: center;
+    padding-bottom: 20px; 
+    color: #3c4858;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  .logo-box {
+    width: 130px;
+    margin: 0 auto 26px auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // sider bar mini
+  &.-mini {
+    width: 80px;
+
+    .logo-box {
+      width: 65px;
+    }
+  }
+}
+
+// menu
+.menu-items {
+
+  li {
+    border-radius: 3px;
+    &:hover {
+      background-color: hsla(0,0%,78%,.2);
+    }
+  }
+  
+  a {
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: block;
+    color: #3c4858;
+
+    i {
+      margin-right: 15px; 
+      color: #a9afbb;
+    }
+
+    &:hover {
+      color: #3c4858;
+    }
+
+    &.active {
+      color: #fff;
+      background: #9C27B0;
+      border-radius: 3px;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  // mini menu
+  &.-mini {
+
+    span {
+      display: none
+    }
+
+    a {
+      padding: 22px 20px;
+      text-align: center;
+
+      i {
+        margin: 0;
+      }
+    }
+
+  }
+}
+
+// minimiza menu
+.toggle-menu {
+  position: absolute;
+  color: #3c4858;
+  font-size: 1.5em;
+  bottom: 10px;
+  left: 29px;
+  cursor: pointer;
+
+  i {
+    display: none;
+  }
+
+  i.active {
+    display: block;
+  }
+}

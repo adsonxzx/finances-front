@@ -1,0 +1,234 @@
+body {
+  background: #fafafa;
+  height: 100%;
+  display: flex;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.side-bar {
+  width: 290px;
+  height: 800px;
+  background: #fff;
+  padding: 20px 10px;
+  transition: 0.1s;
+  box-shadow: 0 1px 8px -2px rgba(0, 0, 0, 0.24);
+}
+.side-bar .title {
+  font-size: 1.8em;
+  text-align: center;
+  padding-bottom: 20px;
+  color: #3c4858;
+  border-bottom: 1px solid #DDDDDD;
+}
+.side-bar .logo-box {
+  width: 130px;
+  margin: 0 auto 26px auto;
+}
+.side-bar .logo-box img {
+  width: 100%;
+}
+.side-bar.-mini {
+  width: 90px;
+}
+.side-bar.-mini .logo-box {
+  width: 65px;
+}
+
+.menu-items li {
+  border-radius: 3px;
+}
+.menu-items li:hover {
+  background-color: rgba(199, 199, 199, 0.2);
+}
+.menu-items a {
+  padding: 8px 20px;
+  margin: 15px 0;
+  display: block;
+  color: #3c4858;
+}
+.menu-items a i {
+  margin-right: 15px;
+  color: #a9afbb;
+}
+.menu-items a:hover {
+  color: #3c4858;
+}
+.menu-items a.active {
+  color: #fff;
+  background: #9C27B0;
+  border-radius: 3px;
+}
+.menu-items a.active i {
+  color: #fff;
+}
+.menu-items.-mini span {
+  display: none;
+}
+.menu-items.-mini a {
+  padding: 16px 20px;
+  text-align: center;
+}
+.menu-items.-mini a i {
+  margin: 0;
+}
+
+.toggle-menu {
+  position: absolute;
+  color: #3c4858;
+  font-size: 1.5em;
+  bottom: 10px;
+  left: 29px;
+  cursor: pointer;
+}
+.toggle-menu i {
+  display: none;
+}
+.toggle-menu i.active {
+  display: block;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0 40px 0;
+}
+.main-header span {
+  color: #555555;
+  font-weight: 500;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-avatar > .image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.user-avatar > .image img {
+  width: 100%;
+}
+
+.resume-money {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-resume {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px -2px rgba(0, 0, 0, 0.54);
+  max-width: 300px;
+  margin-right: 20px;
+}
+.card-resume:last-child {
+  margin: 0;
+}
+.card-resume > .value {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+.card-resume > .value span:first-child {
+  color: #8898aa;
+  font-weight: 500;
+}
+.card-resume > .value span:last-child {
+  color: #32325D;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.card-resume > .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+.card-resume > .icon.-purple {
+  background: #7566E5;
+}
+.card-resume > .icon.-blue {
+  background: #1394EF;
+}
+.card-resume > .icon.-red {
+  background: #F33A5A;
+}
+.card-resume > .icon.-lucky {
+  background: #1A1E4E;
+}
+.card-resume > .info-resume {
+  margin-top: 15px;
+  display: flex;
+}
+.card-resume > .info-resume > .percent {
+  margin-right: 15px;
+}
+.card-resume > .info-resume > .percent.-up {
+  color: #2DCE89;
+}
+.card-resume > .info-resume > .percent.-down {
+  color: #F5365C;
+}
+.card-resume > .info-resume > .info {
+  color: #9EABBA;
+}
+
+.main-content {
+  height: 500px;
+  width: 98%;
+  margin: 0 2%;
+}

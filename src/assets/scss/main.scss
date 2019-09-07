@@ -1,0 +1,203 @@
+@import 'reset';
+@import './components/components';
+@import './components/sidebar';
+@import './components/header';
+@import 'pageHeader';
+@import 'pageWelcome';
+
+// Components
+@import 'components/boxExpense';
+
+// Pages
+@import './pages/home.scss';
+@import './pages/history.scss';
+@import './pages//login';
+
+// Main
+.main {
+  width: 100%;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+}
+
+// Main Content
+.main-content {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+// page title
+.page-title {
+  color: #354558;
+}
+
+.icon {
+  cursor: pointer;
+  color: #72788D;
+
+  // icon lixo
+  &.fa-trash {
+    &:hover {
+      color: red;
+    }
+  }
+
+  // icon edit
+  &.fa-pen {
+    &:hover {
+      color: #1976D2;
+    }
+  }
+
+}
+
+
+.msg-error {
+  position: absolute;
+  color: red;
+  font-size: 0.9em;
+  padding: 2px 0;
+}
+
+// List Expenses
+.list-expenses {
+  position: relative;
+
+  // income
+  &.-income {
+    > .header {
+      background: linear-gradient(60deg,#66bb6a,#43a047);
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(76,175,80,.4);
+    }
+
+    > .table thead th {
+        color: #66bb6a;
+      }
+  }
+  // header
+  > .header {
+    width: 100%;
+    background: linear-gradient(60deg,#ffa726,#fb8c00);
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(255,152,0,.4);
+    padding: 15px 20px;
+    border-radius: 4px;
+    position: absolute;
+    top: -119px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+    > .title {
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    > .text {
+      margin: 0;
+      font-weight: 300;
+      font-size: 0.9em
+    }
+  }
+
+  // Tabela
+  > .table {
+    position: relative;
+    margin-top: 80px; 
+    color: #707070;
+
+    thead th {
+      border: none;
+      color: #ff9800;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+
+    .actions {
+      justify-content: space-around;
+      text-align: center;
+
+      .icon {
+        padding: 5px; 
+      }
+
+      .icon:first-child {
+        padding-right: 20px; 
+      }
+    }
+  }
+}
+
+// Category icon 
+.category-icon {
+  display: flex;
+  align-items: center;
+
+  > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    font-size: 0.9em;
+  }
+
+  > .category {
+    margin-left: 10px;
+    text-transform: capitalize;
+  }
+
+  &.-mercado {
+    > .icon {
+      color: #ff9800;
+      border-color: #fb8c00;
+    }
+  }
+
+  &.-lazer {
+    > .icon {
+      color: #2196f3;
+      border-color: #2196f3;
+    }
+  }
+
+  &.-moradia {
+    > .icon {
+      color: #673ab7;
+      border-color: #673ab7;
+    }
+  }
+}
+
+
+// All income container
+.all-income-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+// All incomes
+.all-income {
+  height: 260px;
+  text-align: center;
+
+  > .value {
+    font-size: 3em;
+    display: block;
+    margin: 33px 0 10px 0;
+    color: #72788d
+  }
+
+  > .text {
+    font-size: 1em;
+    color: #59B15D;
+    font-weight: 600;
+  }
+}
+
