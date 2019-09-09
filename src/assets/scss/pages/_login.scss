@@ -1,1 +1,154 @@
 // Page login
+
+// Logo container 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #172B4D;
+}
+
+
+// Login Social
+.login-social {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+
+  // title
+  > .title {
+    color: #8898aa;
+    font-size: 0.9em;
+  }
+
+  // content
+  > .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    // social media
+    > .box-social {
+      cursor: pointer;
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+      min-width: 124px;
+
+      &:first-child {
+        margin-right: 20px; 
+      }
+
+      // name
+      > .name {
+        color: #5e72e4;
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.form-container {
+  padding: 40px;
+
+  // title
+  > .title {
+    color: #8898aa;
+    font-size: 0.9em;
+    text-align: center;
+  }
+}
+
+// Login box
+.login-box {
+  background: #F7FAFC;
+  box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 450px;
+
+  > .logo {
+    width: 140px;
+    margin: 0 auto;
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+.input-group {
+  box-shadow: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
+  border-radius: 5px;
+}
+
+.input-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+
+  > .icon {
+    padding: 0 16px;
+    color: #8898aa;
+    cursor: default;
+  }
+}
+
+.form-input {
+  width: 100%;
+  display: block;
+  padding: 11px 5px 11px 0;
+  border: none;
+  font-size: 0.95em;
+  color: #8898aa;
+  
+  &:focus {
+    outline: none !important;
+  }
+
+  &::placeholder {
+    color: #8898aa;
+    font-weight: 400;
+  }
+}
+
+.action-button {
+  text-align: center;
+  margin: 20px;
+}
+
+.login-button {
+  background: #1394EF;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 10px 45px;
+  border-radius: 5px;
+  border: none;
+  transition: all .15s ease;
+  
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+.input-radio {
+  > label {
+    font-size: 0.9em;
+    color: #8898aa;
+    font-weight: 400; 
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+}
