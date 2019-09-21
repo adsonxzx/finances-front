@@ -28,10 +28,10 @@ export default props => (
     <Switch>
       <PrivateRoute exact path="/" component={Home} />
       <PrivateRoute path="/historico" component={History} />
-      <Route path="/objetivos" component={Targets} />
-      <Route path="/configuracao" component={Config} />
-      <Route path="/welcome" component={Welcome} />
-      <Route exact path="/register-expense" component={RegisterExpense} />
+      <PrivateRoute path="/objetivos" component={Targets} />
+      <PrivateRoute path="/configuracao" component={Config} />
+      <PrivateRoute path="/welcome" component={Welcome} />
+      <PrivateRoute exact path="/register-expense" component={RegisterExpense} />
       <Route path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
     </Switch>
