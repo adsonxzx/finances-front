@@ -19,10 +19,8 @@ export default props => (
   <Provider store={store}>
     <div className="main">
       <Routers>
-        {console.log()}
-
-        {
-          window.location.pathname === "/login" ? (
+         {
+          window.location.pathname === "/login" || window.location.pathname === '/register' ? (
             <Router />
           ) : (
               <>

@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.jpg'
 import $ from 'jquery'
+import api from '../services/api'
+import {logout} from '../services/auth'
 
 export default class SideBar extends Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     this.initScripts()
@@ -39,7 +37,27 @@ export default class SideBar extends Component {
     })
   }
 
+  // efetua o logout
+  async handleLogout(e){
+    e.preventDefault()
+
+    try {
+      await api.post("/users/logout")
+      logout()
+      window.location.href = "http://localhost:3000/login"
+    } catch (e) {
+      console.log(e)
+    }
+
+  }
+
   render() {
+    const {pathname} = window.location
+
+    if(pathname === "/login" || pathname === "/register") {
+      return null
+    }
+    
     return (
       <aside className="side-bar -mini">
         <div className="logo-box">
@@ -53,6 +71,7 @@ export default class SideBar extends Component {
           <li><Link to="/historico"><i className="fas fa-history"></i> <span> Historico </span> </Link></li>
           <li><Link to="/objetivos"><i className="fas fa-bullseye"></i> <span> Objetivos </span> </Link></li>
           <li><Link to="/configuracoes"><i className="fab fa-accusoft"></i> <span> Configurações </span> </Link></li>
+          <li onClick={this.handleLogout}><a href="/logout"> <i class="fas fa-sign-out-alt"></i> <span> Sair </span> </a>  </li>
         </ul>
 
         <div className="toggle-menu">

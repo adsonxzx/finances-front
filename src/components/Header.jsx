@@ -38,6 +38,12 @@ export default class Header extends Component {
   }
 
   render() {
+    const {pathname} = window.location
+
+    if(pathname === "/login" || pathname === "/register") {
+      return null
+    }
+
     return (
       <header className="main-header">
         <Link to="/">

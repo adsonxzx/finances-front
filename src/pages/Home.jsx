@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import api from '../services/api'
 
 import CardResume from '../components/CardResume'
 import LineChart from '../components/LineChart'
 import PieChart from '../components/PieChart'
 
-const URL = 'http://localhost:3333'
+const APP_URL = process.env.REACT_APP_APP_URL
 
 export default class Home extends Component {
 
@@ -29,7 +29,7 @@ export default class Home extends Component {
   // Obtem ganhos
   async getIncomes() {
     try {
-      const { data } = await axios.get(`${URL}/incomes`)
+      const { data } = await api.get("/incomes", {})
       const valores = data.map(income => income.value)
       const totalIncome = valores.reduce((a, b) => a + b)
       this.setState({ ...this.state, totalIncome })
@@ -41,7 +41,7 @@ export default class Home extends Component {
   // Obtem gastos
   async getExpenses() {
     try {
-      const { data } = await axios.get(`${URL}/expenses`)
+      const { data } = await api.get("/expenses")
       const valores = data.map(income => income.maxValue)
       const totalExpenses = valores.reduce((a, b) => a + b)
       this.setState({ ...this.state, totalExpenses })
@@ -53,7 +53,7 @@ export default class Home extends Component {
   // Obtem patrimonio total
   async getAccounts() {
     try {
-      const { data } = await axios.get(`${URL}/accounts`)     
+      const { data } = await api.get("/accounts")     
       const valores = data.map(income => income.value)
       const totalAccouts = valores.reduce((a, b) => a + b)
       this.setState({ ...this.state, totalAccouts })

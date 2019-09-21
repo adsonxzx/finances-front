@@ -152,3 +152,21 @@
     cursor: pointer;
   }
 }
+
+// Info Register
+.info-register {
+  font-size: 0.9em;
+  text-align: center;
+
+  // info 
+  > .info {
+    color: #8898aa;
+    display: block;
+  }
+
+  // link
+  > .link {
+    color: #1394EF;
+    display: block;
+  }
+}

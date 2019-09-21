@@ -81,6 +81,7 @@ MySnackbarContentWrapper.propTypes = {
 export default function CustomizedSnackbars(props) {
   const [open, setOpen] = React.useState(false);
 
+  console.log(props)
   useEffect(() => {
     setOpen(props.open)
   }, [props.open])
