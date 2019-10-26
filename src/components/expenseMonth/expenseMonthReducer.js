@@ -24,6 +24,8 @@ export default (state = INITIAL_STATE, action) => {
       return {...state, categories: action.payload.categories, expenseMonth: action.payload.month, id: action.payload._id}
     case 'SAVE_LIST_EXPENSE':
       return state
+    case 'CLEAR_LIST_EXPENSE':
+      return {...state, categories: '', expenseMonth: '', valueTotal: 0, categories: []}
     default:
       return state
   }

@@ -7,9 +7,9 @@ import * as Yup from 'yup'
 import queryString from 'query-string'
 
 import TitleForm from '../components/TitleForm'
-import FormExpenseMonth from '../components/expenseMonth/FormExpenseMonth';
+import FormExpenseMonth from './register-expense/FormExpenseMonth';
 import BoxExpense from '../components/BoxExpense';
-import { setItemExpense, setListExpense } from '../components/expenseMonth/expenseMonthActions'
+import { setItemExpense, setListExpense } from './register-expense/expenseMonthActions'
 
 
 const URL = 'http://localhost:3333'
@@ -66,7 +66,6 @@ class RegisterExpense extends Component {
   }
 
   render() {
-    // Props
     const { listExpenseMonth } = this.props
     const {expenseAction} = this.state
 

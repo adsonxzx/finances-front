@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const URL = 'http://localhost:3333'
 
+// Seleciona a categoria do gasto
 export const changeCategory = (category) =>  {
   return ({
     type: "CHANGE_CATEGORY",
@@ -9,14 +10,16 @@ export const changeCategory = (category) =>  {
   })
 }
 
+// Seleciona o mes do gasto
 export const setMonthExpense = (month) => {
+  console.log('setou o mes')
   return ({
     type: "SET_MONTH_EXPENSE",
     payload: month
   })
 }
 
-// Atualiza item da lista de gasto
+// Adiciona gasto a lista de gastos
 export const setItemExpense = (expense) => {
   return ({
     type: "SET_ITEM_EXPENSE",
@@ -38,4 +41,10 @@ export const saveListExpense = (expenseMonth) => {
       type: "SAVE_LIST_EXPENSE" 
     })
   }).catch((e) => console.log(e))
+}
+
+export const clearListExpense = () => {
+  return ({
+    type: "CLEAR_LIST_EXPENSE"
+  })
 }

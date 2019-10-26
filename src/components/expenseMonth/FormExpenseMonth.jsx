@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Field } from 'formik'
 import axios from 'axios'
 import { bindActionCreators } from 'redux'
-import { changeCategory, setMonthExpense, saveListExpense } from './expenseMonthActions'
+import { changeCategory, setMonthExpense, saveListExpense, clearListExpense } from './expenseMonthActions'
 import { connect } from 'react-redux'
 
 import MessageE from '../MessageE'
@@ -84,6 +84,7 @@ class FormExpenseMonth extends Component {
         }
         await axios.post(`${URL}/expenses-month`, expenseMonth)
         this.setState({...this.state, openMessage: true, variant: 'success', message: 'Lista de gasto cadastrada com sucesso!'})
+        this.props.clearListExpense()
       }
     } catch (e) {
       const message = 'Error ao cadastrar'
@@ -114,6 +115,7 @@ class FormExpenseMonth extends Component {
       <form className="form-income row" onSubmit={this.props.handleSubmit}>
         <h4 className="title">Gasto de {monthSelected}</h4>
         {
+          // oculta a seleção do mes quando for para edição
           !nameMonth && (expenseAction !== 'edit') ? (
             <div className="col-12">
               <label>Selecione o Mês</label>
@@ -137,6 +139,7 @@ class FormExpenseMonth extends Component {
           ) : null
          }
 
+        {/* form nome do gasto */}
         <div className="col-6">
           <label className="mt-3">Nome do Gasto</label>
           <Field
@@ -148,6 +151,7 @@ class FormExpenseMonth extends Component {
           {errors.nameExpense && touched.nameExpense && <p className="msg-error">{errors.nameExpense}</p>}
         </div>
 
+        {/* form valor do gasto */}
         <div className="col-6">
           <label className="mt-3">Valor</label>
           <Field
@@ -159,6 +163,7 @@ class FormExpenseMonth extends Component {
           {errors.value && touched.value && <p className="msg-error">{errors.value}</p>}
         </div>
 
+        {/* lista de categorias */}
         <div className="col-12 mt-3">
           <label className="list-categories-title">Selecione uma Categoria</label>
           <div className="list-categories">
@@ -197,7 +202,7 @@ const mapStateToProps = state => ({
   valueTotal: state.expenseMonth.valueTotal
 })
 
-const mapDispathToProps = dispath => bindActionCreators({ changeCategory, setMonthExpense, saveListExpense }, dispath)
+const mapDispathToProps = dispath => bindActionCreators({ clearListExpense, changeCategory, setMonthExpense, saveListExpense }, dispath)
 
 export default connect(mapStateToProps, mapDispathToProps)(FormExpenseMonth)
 
